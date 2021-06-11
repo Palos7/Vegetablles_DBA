@@ -1,0 +1,56 @@
+Create Table User(
+User_ID VARCHAR(20) primary key,
+User_nickname TINYTEXT not null,
+User_Addr VARCHAR(20) not null,
+User_Call INT not null);
+
+Create Table Courier(
+Courier_ID VARCHAR(20) primary key,
+Reputation INTEGER not null,
+Rec_Ordernum int,
+Rec_Goodnum int,
+Rec_Repnum int,
+Rec_Call VARCHAR(20)  not null);
+
+Create Table Vegetables(
+Veg_ID VARCHAR(20) not null,
+Veg_Name VARCHAR(20) not null,
+Merc_ID VARCHAR(20) not null,
+Veg_Price FLOAT(5,2) not null);
+
+Create Table Merchant(
+Merc_ID VARCHAR(20) primary key,
+Merc_Addr VARCHAR(20) not null,
+Merc_Ordernum int,
+Merc_Goodnum int,
+Merc_Repnum int,
+Merc_Call int not null);
+
+Create Table Store(
+Store_ID VARCHAR(20) primary key,
+Store_Kindnum int,
+Store_Certeinnum int);
+
+Create Table History_Order(
+Order_ID VARCHAR(20) primary key,
+User_ID VARCHAR(20) not null,
+Psy_ID VARCHAR(20) not null,
+Merc_ID VARCHAR(20) not null,
+Content VARCHAR(200) not null,
+weight FLOAT(5,2) not null,
+Price FLOAT(5,2) not null,
+Origin VARCHAR(20) not null,
+Destination VARCHAR(20) not null,
+Place_Time VARCHAR(20) not null);
+
+Create Table MyOrder(
+Order_ID VARCHAR(20) primary key,
+User_ID VARCHAR(20) not null,
+PSY_ID VARCHAR(20) not null,
+Content VARCHAR(200) not null,
+weight FLOAT(5,2) not null,
+Price FLOAT(5,2) not null,
+Origin VARCHAR(20) not null,
+Destination VARCHAR(20) not null,
+Place_Time VARCHAR(20) not null);
+
